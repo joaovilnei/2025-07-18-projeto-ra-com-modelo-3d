@@ -1,24 +1,25 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>Teste de RA usando modelo 3d</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-animation-mixer@5.0.2/dist/aframe-animation-mixer.min.js"></script>
   </head>
 
   <body style="margin: 0; overflow: hidden;">
     <a-scene vr-mode-ui="enabled: false" embedded arjs="debugUIEnabled: false">
       <a-assets>
-        <a-asset-item id="dino" src="dinossauro.glb"></a-asset-item>
+        <a-asset-item id="dino-animado" src="dinossauro-animado.glb"></a-asset-item>
       </a-assets>
 
       <a-marker preset="hiro">
-        <a-entity id="dinossauro"
+        <a-entity id="dinossauro-bailando"
                   position="0 0.5 0"
                   rotation="0 0 0"
                   scale="0.5 0.5 0.5"
-                  gltf-model="#dino"></a-entity>
+                  gltf-model="#dino-animado"
+                  animation-mixer></a-entity>
       </a-marker>
 
       <a-entity camera></a-entity>
@@ -27,22 +28,3 @@
     </body>
 </html>
 
-
-<!--
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Teste básico AR.js</title>
-    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
-  </head>
-  <body style="margin: 0; overflow: hidden;">
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-        <a-box position="0 0.5 0" material="color: red;"></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
-</html>
--->
