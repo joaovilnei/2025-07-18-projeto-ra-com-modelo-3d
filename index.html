@@ -4,11 +4,11 @@
     <title>Teste de RA usando modelo 3d</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://unpkg.com/aframe-animation-mixer@5.0.2/dist/aframe-animation-mixer.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/aframe-extras@6.1.1/dist/aframe-extras.min.js"></script>
   </head>
 
   <body style="margin: 0; overflow: hidden;">
-    <a-scene vr-mode-ui="enabled: false" embedded arjs="debugUIEnabled: false">
+    <a-scene vr-mode-ui="enabled: false" embedded arjs="debugUIEnabled: false" extras="animation-mixer: true">
       <a-assets>
         <a-asset-item id="dino-animado" src="dinossauro-animado.glb"></a-asset-item>
       </a-assets>
