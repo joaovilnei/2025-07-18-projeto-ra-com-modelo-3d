@@ -4,7 +4,7 @@
     <title>Teste de RA usando modelo 3d</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aframe-animation-mixer@5.0.2/dist/aframe-animation-mixer.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-mixer@5.0.2/dist/aframe-animation-mixer.min.js"></script>  
   </head>
 
   <body style="margin: 0; overflow: hidden;">
@@ -19,7 +19,7 @@
                   rotation="0 0 0"
                   scale="0.5 0.5 0.5"
                   gltf-model="#dino-animado"
-                  animation-mixer></a-entity>
+                  animation-mixer="clip: *;"></a-entity>
       </a-marker>
 
       <a-entity camera></a-entity>
